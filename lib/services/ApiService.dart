@@ -75,7 +75,12 @@ class ApiService {
       }
       return resp;
     } catch (err) {
-      throw err;
+      if (checkAuthErrorResponse(context, err)) {
+        Navigator.of(context).popAndPushNamed('/logout');
+        return null;
+      } else {
+        throw err;
+      }
     }
   }
 
@@ -100,7 +105,12 @@ class ApiService {
       }
       return resp;
     } catch (err) {
-      throw err;
+      if (checkAuthErrorResponse(context, err)) {
+        Navigator.of(context).popAndPushNamed('/logout');
+        return null;
+      } else {
+        throw err;
+      }
     }
   }
 
@@ -128,7 +138,12 @@ class ApiService {
       }
       return resp;
     } catch (err) {
-      throw err;
+      if (checkAuthErrorResponse(context, err)) {
+        Navigator.of(context).popAndPushNamed('/logout');
+        return null;
+      } else {
+        throw err;
+      }
     }
   }
 
@@ -154,7 +169,12 @@ class ApiService {
       }
       return resp;
     } catch (err) {
-      throw err;
+      if (checkAuthErrorResponse(context, err)) {
+        Navigator.of(context).popAndPushNamed('/logout');
+        return null;
+      } else {
+        throw err;
+      }
     }
   }
 
@@ -180,7 +200,25 @@ class ApiService {
       }
       return resp;
     } catch (err) {
-      throw err;
+      if (checkAuthErrorResponse(context, err)) {
+        Navigator.of(context).popAndPushNamed('/logout');
+        return null;
+      } else {
+        throw err;
+      }
     }
+  }
+
+  bool checkAuthErrorResponse(context, msg) {
+    try {
+      if (msg != null) {
+        if (msg.response != null) {
+          if (msg.response.statusCode == 401) {
+            return true;
+          }
+        }
+      }
+    } catch (err) {}
+    return false;
   }
 }
