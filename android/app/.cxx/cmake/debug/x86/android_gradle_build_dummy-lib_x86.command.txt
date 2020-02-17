@@ -1,0 +1,7 @@
+Executable : /usr/bin/ninja
+arguments : 
+-C
+/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/cmake/debug/x86
+dummy-lib
+jvmArgs : 
+

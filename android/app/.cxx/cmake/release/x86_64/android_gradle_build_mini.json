@@ -1,0 +1,19 @@
+{
+  "buildFiles": [
+    "/home/jordanlumley/Android/Sdk/ndk/21.0.6113669/build/cmake/android.toolchain.cmake",
+    "/home/jordanlumley/Projects/mobile/atlascrm/android/app/src/main/cpp/CMakeLists.txt",
+    "/home/jordanlumley/Android/Sdk/ndk/21.0.6113669/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/usr/bin/ninja -C \"/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/cmake/release/x86_64\" clean"
+  ],
+  "buildTargetsCommand": "/usr/bin/ninja -C \"/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/cmake/release/x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "dummy-lib-Release-x86_64": {
+      "artifactName": "dummy-lib",
+      "buildCommand": "/usr/bin/ninja -C \"/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/cmake/release/x86_64\" dummy-lib",
+      "abi": "x86_64",
+      "output": "/home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/cmake/release/obj/x86_64/libdummy-lib.so"
+    }
+  }
+}

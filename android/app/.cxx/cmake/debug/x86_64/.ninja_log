@@ -1,0 +1,7 @@
+# ninja log v5
+0	1	0	clean	a7c70eacb11a5051
+0	189	1581711685	CMakeFiles/dummy-lib.dir/dummy-lib.cpp.o	bcd2209a43fa5d07
+189	197	1581711685	/home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/cmake/debug/obj/x86_64/libdummy-lib.so	f2e96f867655e7ca
+0	2	0	clean	a7c70eacb11a5051
+1	194	1581711706	CMakeFiles/dummy-lib.dir/dummy-lib.cpp.o	bcd2209a43fa5d07
+194	202	1581711706	/home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/cmake/debug/obj/x86_64/libdummy-lib.so	f2e96f867655e7ca

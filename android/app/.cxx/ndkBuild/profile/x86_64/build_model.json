@@ -1,0 +1,60 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "/home/jordanlumley/Projects/mobile/atlascrm/android",
+      "sdkFolder": "/home/jordanlumley/Android/Sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "/home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "/home/jordanlumley/Projects/mobile/atlascrm/android/app",
+      "makeFile": "/home/jordanlumley/Development/android-libs/OpenCV-android-sdk/sdk/native/jni/OpenCV.mk",
+      "buildSystem": "NDK_BUILD",
+      "compilerSettingsCacheFolder": "/home/jordanlumley/Projects/mobile/atlascrm/android/.cxx",
+      "cxxFolder": "/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx",
+      "ndkFolder": "/home/jordanlumley/Development/android-ndk-r21",
+      "ndkVersion": "21.0.6113669",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [],
+    "variantName": "profile",
+    "soFolder": "/home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/profile/lib",
+    "objFolder": "/home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/profile/obj/local",
+    "jsonFolder": "/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/ndkBuild/profile",
+    "gradleBuildOutputFolder": "/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/cxx/profile",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "X86_64",
+  "abiPlatformVersion": 21,
+  "cxxBuildFolder": "/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/ndkBuild/profile/x86_64",
+  "jsonFile": "/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/ndkBuild/profile/x86_64/android_gradle_build.json",
+  "gradleBuildOutputFolder": "/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/cxx/profile/x86_64",
+  "objFolder": "/home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/profile/obj/local/x86_64",
+  "buildCommandFile": "/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/ndkBuild/profile/x86_64/build_command.txt",
+  "buildOutputFile": "/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/ndkBuild/profile/x86_64/build_output.txt",
+  "modelOutputFile": "/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/ndkBuild/profile/x86_64/build_model.json",
+  "jsonGenerationLoggingRecordFile": "/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/ndkBuild/profile/x86_64/json_generation_record.json",
+  "compileCommandsJsonFile": "/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx/ndkBuild/profile/x86_64/compile_commands.json"
+}
