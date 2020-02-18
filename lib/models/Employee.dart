@@ -1,11 +1,11 @@
 class Employee {
-  String id;
+  String employee;
   bool isActive;
   String employeeAccountType;
   String employeeCompany;
   dynamic document;
 
-  Employee(this.id, this.isActive, this.employeeAccountType,
+  Employee(this.employee, this.isActive, this.employeeAccountType,
       this.employeeCompany, this.document);
 
   static Employee getEmptyLead() {
@@ -14,7 +14,7 @@ class Employee {
 
   static Employee fromJson(Map<String, dynamic> data) {
     return Employee(
-      data["id"],
+      data["employee"],
       data["isactive"],
       data["employeeAccountType"],
       data["employeeCompany"],
@@ -23,7 +23,7 @@ class Employee {
   }
 
   Map<String, dynamic> toJson() => {
-        'id': id,
+        'employee': employee,
         'isactive': isActive,
         'employeeAccountType': employeeAccountType,
         'employeeCompany': employeeCompany,

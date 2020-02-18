@@ -56,7 +56,7 @@ class _EmployeeMapState extends State<EmployeeMap> {
 
     if (SocketService.SOCKET != null) {
       SocketService.SOCKET.on('newLocation', (location) async {
-        var epoch = location["locationDocument"]["time"];
+        var epoch = location["location_document"]["time"];
         var lastCheckinTime =
             new DateTime.fromMicrosecondsSinceEpoch(epoch * 1000);
 
@@ -65,12 +65,12 @@ class _EmployeeMapState extends State<EmployeeMap> {
         var formatter = DateFormat.yMd().add_jm();
         String datetimeFmt = formatter.format(dateTime.toLocal());
 
-        var markerId = MarkerId(location["employeeId"]);
+        var markerId = MarkerId(location["employee_id"]);
         var currentEmployeeMarker =
             markers.where((marker) => marker.markerId.value == markerId.value);
 
         var pictureUrl =
-            location["employeeDocument"]["googleClaims"]["picture"];
+            location["employee_document"]["googleClaims"]["picture"];
         var icon = await getMarkerImageFromCache(pictureUrl);
 
         if (currentEmployeeMarker.length > 0) {
@@ -80,15 +80,15 @@ class _EmployeeMapState extends State<EmployeeMap> {
             markers.add(
               Marker(
                   position: LatLng(
-                    location["locationDocument"]["latitude"],
-                    location["locationDocument"]["longitude"],
+                    location["location_document"]["latitude"],
+                    location["location_document"]["longitude"],
                   ),
                   markerId: markerId,
                   infoWindow: InfoWindow(
-                    snippet: location["employeeDocument"]["fullName"] +
+                    snippet: location["employee_document"]["fullName"] +
                         " " +
                         datetimeFmt,
-                    title: location["employeeDocument"]["email"],
+                    title: location["employee_document"]["email"],
                   ),
                   icon: icon),
             );
@@ -98,13 +98,13 @@ class _EmployeeMapState extends State<EmployeeMap> {
             markers.add(
               Marker(
                   position: LatLng(
-                    location["locationDocument"]["latitude"],
-                    location["locationDocument"]["longitude"],
+                    location["location_document"]["latitude"],
+                    location["location_document"]["longitude"],
                   ),
                   markerId: markerId,
                   infoWindow: InfoWindow(
-                    snippet: location["employeeDocument"]["fullName"],
-                    title: location["employeeDocument"]["email"],
+                    snippet: location["employee_document"]["fullName"],
+                    title: location["employee_document"]["email"],
                   ),
                   icon: icon),
             );
@@ -136,21 +136,21 @@ class _EmployeeMapState extends State<EmployeeMap> {
     if (lastLocationResponse.statusCode == 200) {
       var lastLocationArr = lastLocationResponse.data;
       for (var item in lastLocationArr) {
-        var employeeDocument = item["employeedocument"];
+        var employeeDocument = item["employee_document"];
 
-        var isActive = item["isemployeeactive"];
+        var isActive = item["is_employee_active"];
         if (isActive != null) {
           if (!isActive) {
             continue;
           }
         }
 
-        var markerId = MarkerId(item["employeeid"]);
+        var markerId = MarkerId(item["employee"]);
 
         var pictureUrl = employeeDocument["googleClaims"]["picture"];
         var icon = await getMarkerImageFromCache(pictureUrl);
 
-        var epoch = item["locationdocument"]["time"];
+        var epoch = item["location_document"]["time"];
         var lastCheckinTime =
             new DateTime.fromMicrosecondsSinceEpoch(epoch * 1000);
 
@@ -162,8 +162,8 @@ class _EmployeeMapState extends State<EmployeeMap> {
           markers.add(
             Marker(
                 position: LatLng(
-                  item["locationdocument"]["latitude"],
-                  item["locationdocument"]["longitude"],
+                  item["location_document"]["latitude"],
+                  item["location_document"]["longitude"],
                 ),
                 markerId: markerId,
                 infoWindow: InfoWindow(

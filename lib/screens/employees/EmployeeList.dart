@@ -130,7 +130,7 @@ class _EmployeeListState extends State<EmployeeList> {
           return GestureDetector(
             onTap: () {
               Navigator.pushNamed(context, "/viewemployee",
-                  arguments: emp["id"]);
+                  arguments: emp["employee"]);
             },
             child: Container(
               color: Colors.white,

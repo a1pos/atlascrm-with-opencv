@@ -13,7 +13,7 @@
       "buildSystem": "NDK_BUILD",
       "compilerSettingsCacheFolder": "/home/jordanlumley/Projects/mobile/atlascrm/android/.cxx",
       "cxxFolder": "/home/jordanlumley/Projects/mobile/atlascrm/android/app/.cxx",
-      "ndkFolder": "/home/jordanlumley/Development/android-ndk-r21",
+      "ndkFolder": "/home/jordanlumley/Android/Sdk/ndk/21.0.6113669",
       "ndkVersion": "21.0.6113669",
       "ndkSupportedAbiList": [
         "ARMEABI_V7A",

@@ -296,7 +296,7 @@ class LeadStepperState extends State<LeadStepper> {
 
       model.leadSource = "";
 
-      model.employeeId = userService.getCurrentEmployee().id;
+      model.employeeId = userService.getCurrentEmployee().employee;
 
       var resp = await apiService.authPost(context, "/leads", model);
       if (resp != null) {

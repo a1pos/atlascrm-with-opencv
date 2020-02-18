@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:convert';
 
 import 'package:atlascrm/components/CenteredClearLoadingScreen.dart';
 import 'package:atlascrm/components/CustomAppBar.dart';
@@ -27,7 +26,6 @@ class _EmployeeMapHistoryState extends State<EmployeeMapHistory> {
   Completer<GoogleMapController> _fullScreenMapController = Completer();
 
   final Set<Marker> _markers = new Set<Marker>();
-  // final Set<Polyline> _polyline = new Set<Polyline>();
 
   var employeeName = "";
 
@@ -86,25 +84,25 @@ class _EmployeeMapHistoryState extends State<EmployeeMapHistory> {
 
         var previousLocation;
         for (var location in locationDataArray) {
-          var employeeDocument = location["employeedocument"];
+          var employeeDocument = location["employee_document"];
 
           if (employeeName == "") {
             employeeName = employeeDocument["fullName"];
           }
 
           var latLng = LatLng(
-            location["locationdocument"]["latitude"],
-            location["locationdocument"]["longitude"],
+            location["location_document"]["latitude"],
+            location["location_document"]["longitude"],
           );
 
           latLngs.add(latLng);
 
           if (previousLocation != null) {
-            var epoch = location["locationdocument"]["time"];
+            var epoch = location["location_document"]["time"];
             var locationDateTime =
                 new DateTime.fromMicrosecondsSinceEpoch(epoch * 1000);
 
-            var previousEpoch = previousLocation["locationdocument"]["time"];
+            var previousEpoch = previousLocation["location_document"]["time"];
             var previousLocationDateTime =
                 new DateTime.fromMicrosecondsSinceEpoch(previousEpoch * 1000);
 
@@ -124,7 +122,7 @@ class _EmployeeMapHistoryState extends State<EmployeeMapHistory> {
               markers.add(
                 Marker(
                   position: latLng,
-                  markerId: MarkerId(location["locationid"]),
+                  markerId: MarkerId(location["location_id"]),
                   infoWindow: InfoWindow(
                     title: locationDateTime.toString(),
                   ),
@@ -203,7 +201,7 @@ class _EmployeeMapHistoryState extends State<EmployeeMapHistory> {
       appBar: CustomAppBar(
         key: Key("employeeMapHistoryAppBar"),
         title: Text(
-          isLoading ? "Loading..." : "Map History",
+          isLoading ? "Loading..." : "Map History - $employeeName",
         ),
       ),
       body: isLoading

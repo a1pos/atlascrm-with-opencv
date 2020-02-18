@@ -15,16 +15,16 @@ import 'package:atlascrm/services/UserService.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:permission_handler/permission_handler.dart';
+// import 'package:permission_handler/permission_handler.dart';
 
 List<CameraDescription> cameras;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  Map<PermissionGroup, PermissionStatus> permissions = await PermissionHandler()
-      .requestPermissions(
-          [PermissionGroup.camera, PermissionGroup.access_media_location]);
+  // Map<PermissionGroup, PermissionStatus> permissions = await PermissionHandler()
+  //     .requestPermissions(
+  //         [PermissionGroup.camera, PermissionGroup.access_media_location]);
 
   cameras = await availableCameras();
 
@@ -150,19 +150,12 @@ class _AtlasCRMState extends State<AtlasCRM> {
                 page: ViewEmployeeScreen(settings.arguments));
             break;
           case '/camera':
-            // return SlideRightRoute(page: CameraPage());
             return SlideRightRoute(
                 page:
                     CameraPage(cameras: cameras, callback: settings.arguments));
             break;
-          case '/terminal':
-            // return MaterialPageRoute(builder: (context) => TerminalScreen());
-            break;
           case '/settings':
             // return MaterialPageRoute(builder: (context) => SettingsScreen());
-            break;
-          case '/settlements':
-            // return MaterialPageRoute(builder: (context) => SettlementScreen());
             break;
         }
       },

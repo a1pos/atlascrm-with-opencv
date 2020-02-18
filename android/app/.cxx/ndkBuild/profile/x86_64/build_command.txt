@@ -1,4 +1,4 @@
-Executable : /home/jordanlumley/Development/android-ndk-r21/ndk-build
+Executable : /home/jordanlumley/Android/Sdk/ndk/21.0.6113669/ndk-build
 arguments : 
 NDK_PROJECT_PATH=null
 APP_BUILD_SCRIPT=/home/jordanlumley/Development/android-libs/OpenCV-android-sdk/sdk/native/jni/OpenCV.mk

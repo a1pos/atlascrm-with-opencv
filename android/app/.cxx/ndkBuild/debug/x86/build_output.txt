@@ -5,7 +5,7 @@ rm -f /home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBui
 rm -f /home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/debug/lib/x86/gdb.setup
 mkdir -p /home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/debug/lib/x86
 echo [x86] "Gdbserver      ": "[i686-linux-android] /home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/debug/lib/x86/gdbserver"
-install -p /home/jordanlumley/Development/android-ndk-r21/prebuilt/android-x86/gdbserver/gdbserver /home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/debug/lib/x86/gdbserver
+install -p /home/jordanlumley/Android/Sdk/ndk/21.0.6113669/prebuilt/android-x86/gdbserver/gdbserver /home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/debug/lib/x86/gdbserver
 echo [x86] "Gdbsetup       ": "/home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/debug/lib/x86/gdb.setup"
 echo "set solib-search-path /home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/debug/obj/local/x86" > /home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/debug/lib/x86/gdb.setup
-echo "directory /home/jordanlumley/Development/android-ndk-r21/toolchains/llvm/prebuilt/linux-x86_64/sysroot" >> /home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/debug/lib/x86/gdb.setup
+echo "directory /home/jordanlumley/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/sysroot" >> /home/jordanlumley/Projects/mobile/atlascrm/build/app/intermediates/ndkBuild/debug/lib/x86/gdb.setup

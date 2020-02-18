@@ -108,7 +108,7 @@ class _EmployeeCallHistoryState extends State<EmployeeCallHistory> {
                               ),
                               Align(
                                 alignment: Alignment.centerRight,
-                                child: Text("Duration: $duration"),
+                                child: Text("Duration(s): $duration"),
                               ),
                             ],
                           ),

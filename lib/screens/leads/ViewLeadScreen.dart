@@ -242,29 +242,29 @@ class ViewLeadScreenState extends State<ViewLeadScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
-                            MaterialButton(
-                              padding: EdgeInsets.all(5),
-                              color: Color.fromARGB(500, 1, 224, 143),
-                              onPressed: () async {
-                                // await platform.invokeMethod("OPEN_CAMERA");
-                                Navigator.pushNamed(context, "/camera",
-                                    arguments: imageResult);
-                              },
-                              child: Row(
-                                children: <Widget>[
-                                  Icon(
-                                    Icons.file_upload,
-                                    color: Colors.white,
-                                  ),
-                                  Text(
-                                    ' Statement',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
+                            // MaterialButton(
+                            //   padding: EdgeInsets.all(5),
+                            //   color: Color.fromARGB(500, 1, 224, 143),
+                            //   onPressed: () async {
+                            //     // await platform.invokeMethod("OPEN_CAMERA");
+                            //     Navigator.pushNamed(context, "/camera",
+                            //         arguments: imageResult);
+                            //   },
+                            //   child: Row(
+                            //     children: <Widget>[
+                            //       Icon(
+                            //         Icons.file_upload,
+                            //         color: Colors.white,
+                            //       ),
+                            //       Text(
+                            //         ' Statement',
+                            //         style: TextStyle(
+                            //           color: Colors.white,
+                            //         ),
+                            //       ),
+                            //     ],
+                            //   ),
+                            // ),
                           ],
                         ),
                       ),

@@ -90,7 +90,7 @@ class _LeadsScreenState extends State<LeadsScreen> {
   }
 
   void openLead(lead) {
-    Navigator.pushNamed(context, "/viewlead", arguments: lead["id"]);
+    Navigator.pushNamed(context, "/viewlead", arguments: lead["lead"]);
   }
 
   @override

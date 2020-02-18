@@ -94,7 +94,7 @@ class ViewEmployeeScreenState extends State<ViewEmployeeScreen> {
   Future<void> updateEmployee() async {
     try {
       var resp = await apiService.authPut(
-          context, "/employees/" + employee.id, employee);
+          context, "/employees/" + employee.employee, employee);
       if (resp.statusCode == 200) {
         Fluttertoast.showToast(
             msg: "Update Successful!",

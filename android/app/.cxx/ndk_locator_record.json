@@ -1,5 +1,5 @@
 {
-  "ndkFolder": "/home/jordanlumley/Development/android-ndk-r21",
+  "ndkFolder": "/home/jordanlumley/Android/Sdk/ndk/21.0.6113669",
   "messages": [
     {
       "level": "INFO",
@@ -7,7 +7,7 @@
     },
     {
       "level": "INFO",
-      "message": "ndk.dir in local.properties is /home/jordanlumley/Development/android-ndk-r21"
+      "message": "ndk.dir in local.properties is not set"
     },
     {
       "level": "INFO",
@@ -16,10 +16,6 @@
     {
       "level": "INFO",
       "message": "sdkFolder is /home/jordanlumley/Android/Sdk"
-    },
-    {
-      "level": "INFO",
-      "message": "Considering /home/jordanlumley/Development/android-ndk-r21 by ndk.dir"
     },
     {
       "level": "INFO",
@@ -35,7 +31,7 @@
     },
     {
       "level": "INFO",
-      "message": "Found requested ndk.dir (/home/jordanlumley/Development/android-ndk-r21) which has version 21.0.6113669"
+      "message": "No user requested version, choosing /home/jordanlumley/Android/Sdk/ndk/21.0.6113669 which is version 21.0.6113669"
     }
   ]
 }

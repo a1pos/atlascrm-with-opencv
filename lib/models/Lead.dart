@@ -1,5 +1,5 @@
 class Lead {
-  String id;
+  String lead;
   String firstName;
   String lastName;
   String emailAddress;
@@ -18,7 +18,7 @@ class Lead {
   String notes;
 
   Lead(
-      this.id,
+      this.lead,
       this.firstName,
       this.lastName,
       this.emailAddress,
@@ -39,7 +39,7 @@ class Lead {
 
   static Lead fromJson(Map<String, dynamic> data) {
     return Lead(
-      data["id"],
+      data["lead"],
       data["document"]["firstName"],
       data["document"]["lastName"],
       data["document"]["emailAddress"],
@@ -56,7 +56,7 @@ class Lead {
   }
 
   Map<String, dynamic> toJson() => {
-        'id': id,
+        'lead': lead,
         'firstName': firstName,
         'lastName': lastName,
         'emailAddress': emailAddress,

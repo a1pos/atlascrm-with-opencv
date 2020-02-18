@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:developer';
 
 import 'package:atlascrm/config/ConfigSettings.dart';
@@ -125,7 +124,8 @@ class UserService {
         return true;
       }
     } catch (err) {
-      log(err);
+      // log(err);
+      print(err);
     }
 
     return false;
